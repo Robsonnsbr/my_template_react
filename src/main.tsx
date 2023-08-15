@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/my_template_react/oldContact",
-        element: <Navigate to="/contact" />,
+        element: <Navigate to="/my_template_react/contact" />,
       },
     ],
   },
