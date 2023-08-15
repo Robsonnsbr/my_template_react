@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { App } from "./App.tsx";
-import { rotas } from "./routes/exports.tsx";
+import { rotas } from "./routes/exportsRotes.tsx";
 
 import "./index.css";
 
