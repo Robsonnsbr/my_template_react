@@ -30,6 +30,6 @@ body {
   background: radial-gradient(circle,
       rgba(0, 0, 0, 0.488) 10%,
       rgba(0, 0, 0, 0) 100%),
-    url(/src/assets/background_earth.jpg) center/cover;
+    url(/img/background_earth.jpg) center/cover;
   background-blend-mode: darken;
 }
