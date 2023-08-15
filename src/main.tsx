@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     path: "/my_template_react",
     element: <App />,
     errorElement: <rotas.ErrorPage />,
-    //TODO: verificar pq ele não entra no ErrorPage? funciona só com o caminho base "/"?
+    //TODO: verificar porq ele não entra no ErrorPage? funciona só com o caminho base "/"?
     children: [
       {
         path: "/my_template_react",
