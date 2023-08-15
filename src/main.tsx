@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     path: "/my_template_react",
     element: <App />,
     errorElement: <ErrorPage />,
+    //TODO: verificar pq ele não entra no ErrorPage? funciona só com o caminho base "/"?
     children: [
       {
         path: "/my_template_react",
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/my_template_react/oldContact",
-        element: <Navigate to="/my_template_react/contact" />,
+        element: <Navigate to="/contact" />,
       },
     ],
   },
