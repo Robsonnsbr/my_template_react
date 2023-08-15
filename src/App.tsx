@@ -11,7 +11,7 @@ export const App = () => {
     <>
       <Navbar />
       <main className={css.outlet}>
-        <h3>TESTEE</h3>
+        <h3>TESTE</h3>
         <Outlet />
       </main>
       <Footer />
