@@ -1,0 +1,9 @@
+.errorPage {
+  height: 100%;
+  width: 100%;
+  background: #ff000013;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

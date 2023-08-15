@@ -1,0 +1,9 @@
+.contact {
+  height: 100%;
+  width: 100%;
+  background: #1ddb7913;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
