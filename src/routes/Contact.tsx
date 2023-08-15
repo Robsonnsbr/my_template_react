@@ -8,7 +8,9 @@ export const Contact = () => {
       <h1>Page Contacts</h1>
       {arrayContact.map((id) => (
         <p key={id}>
-          <Link to={`/contact/${id}`}>Forma de contato {id}</Link>
+          <Link to={`/my_template_react/contact/${id}`}>
+            Forma de contato {id}
+          </Link>
         </p>
       ))}
     </div>

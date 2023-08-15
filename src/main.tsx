@@ -22,24 +22,24 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "/my_template_react",
         element: <Home />,
       },
       {
-        path: "/About",
+        path: "/my_template_react/about",
         element: <About />,
       },
       {
-        path: "/Contact",
+        path: "/my_template_react/contact",
         element: <Contact />,
       },
       {
-        path: "/Contact/:id",
+        path: "/my_template_react/contact/:id",
         element: <ContactDetails />,
       },
       {
-        path: "oldContact",
-        element: <Navigate to="/contact" />,
+        path: "/my_template_react/oldContact",
+        element: <Navigate to="/my_template_react/contact" />,
       },
     ],
   },
