@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { App } from "./App.tsx";
-import { rotas } from "./routes/exports.tsx";
+import { rotas } from "./routes/exportsRotes.tsx";
 
 import "./index.css";
 
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     path: "/my_template_react",
     element: <App />,
     errorElement: <rotas.ErrorPage />,
-    //TODO: verificar pq ele não entra no ErrorPage? funciona só com o caminho base "/"?
+    //TODO: verificar porq ele não entra no ErrorPage? funciona só com o caminho base "/"?
     children: [
       {
         path: "/my_template_react",
