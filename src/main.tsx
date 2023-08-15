@@ -17,7 +17,7 @@ import "./index.css";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/my_template_react",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
