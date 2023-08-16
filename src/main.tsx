@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 
 import { App } from "./App.tsx";
-import { rotas } from "./routes/exportsRotes.tsx";
+import { routesPage } from "./routes/exportRoutesPage.tsx";
+const { ErrorPage, Home, About, Projects, ProjectDetails } = routesPage;
 
 import "./index.css";
 
@@ -15,28 +16,28 @@ const router = createBrowserRouter([
   {
     path: "/my_template_react",
     element: <App />,
-    errorElement: <rotas.ErrorPage />,
+    errorElement: <ErrorPage />,
     //TODO: verificar porq ele não entra no ErrorPage? funciona só com o caminho base "/"?
     children: [
       {
         path: "/my_template_react",
-        element: <rotas.Home />,
+        element: <Home />,
       },
       {
         path: "/my_template_react/about",
-        element: <rotas.About />,
+        element: <About />,
       },
       {
-        path: "/my_template_react/contact",
-        element: <rotas.Contact />,
+        path: "/my_template_react/Projects",
+        element: <Projects />,
       },
       {
-        path: "/my_template_react/contact/:id",
-        element: <rotas.ContactDetails />,
+        path: "/my_template_react/Project/:id",
+        element: <ProjectDetails />,
       },
       {
-        path: "/my_template_react/oldContact",
-        element: <Navigate to="/my_template_react/contact" />,
+        path: "/my_template_react/oldProject",
+        element: <Navigate to="/my_template_react/Project" />,
       },
     ],
   },

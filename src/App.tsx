@@ -1,8 +1,9 @@
 // import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import css from "./App-Outlet.module.css";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
+import { routesComponents } from "./components/exportRoutesComponents";
+
+const { Navbar, Footer } = routesComponents;
 
 export const App = () => {
   // const [count, setCount] = useState(0);
