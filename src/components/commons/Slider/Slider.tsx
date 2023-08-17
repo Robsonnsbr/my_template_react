@@ -1,23 +1,16 @@
-import { ReactNode } from "react";
-import css from "./Slider.module.css";
+import { SliderProps } from "../../../@types/types";
+
+import { Swiper } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Swiper, SwiperProps } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
 
-interface SliderProps {
-  settings: SwiperProps;
-  children: ReactNode;
-}
+import "./Slider.css"; //Não usar css.module e deixar a chamada após os styles do swiper
 
 export const Slider = ({ settings, children }: SliderProps) => {
   return (
-    <Swiper
-      className={css.slider}
-      modules={[Navigation, Pagination, A11y]}
-      {...settings}
-    >
+    <Swiper modules={[Navigation, Pagination, A11y]} {...settings}>
       {children}
     </Swiper>
   );

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import css from "./Projects.module.css";
 import { Slider } from "../../components/commons/Slider/Slider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
+import css from "./Projects.module.css";
 
 export const Projects = () => {
   const settings: SwiperProps = {
@@ -15,7 +15,7 @@ export const Projects = () => {
   const arrayProject = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
-    <div className={css.Project}>
+    <div className={css.project}>
       <h1>Page Projects</h1>
 
       <Slider settings={settings}>

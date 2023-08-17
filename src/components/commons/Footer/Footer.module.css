@@ -1,5 +1,15 @@
 .footer {
+  position: absolute;
   bottom: 0;
-  margin: 10px;
+  width: 100%;
   text-align: center;
+  margin-bottom: .5rem;
 }
+
+/* @media (height > 600) {
+  .footer {
+    position: relative;
+
+  }
+
+} */
