@@ -18,6 +18,7 @@
 
 html,
 body {
+  background: black;
   height: 100% !important;
 
 }
@@ -31,17 +32,9 @@ body {
   background: radial-gradient(circle,
       rgba(0, 0, 0, 0.488) 10%,
       rgba(0, 0, 0, 0) 100%),
-    url(/img/background_earth.jpg) center/cover;
+    url(/img/background_earth.jpg) center/cover no-repeat;
   background-blend-mode: darken;
   min-height: 100%
 }
 
-/* @media (max-width: 400px) {
-  body {
-    height: 50vh;
-  }
-} */
-
-/* @media (orientation: landscape) {
-  .main {}
-} */
+/* @media (orientation: landscape) {} */

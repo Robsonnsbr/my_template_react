@@ -1,15 +1,16 @@
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
   margin-bottom: .5rem;
 }
 
-/* @media (height > 600) {
+@media (max-width: 400px) {
   .footer {
     position: relative;
-
+    bottom: 0;
+    width: 100%;
+    margin: .5rem;
   }
-
-} */
+}
