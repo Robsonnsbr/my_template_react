@@ -6,6 +6,7 @@
 }
 
 * {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Alien", "Inter", sans-serif;
@@ -17,12 +18,13 @@
 
 html,
 body {
-  height: 100%;
-  margin: 0;
+  background: black;
+  height: 100% !important;
+
 }
 
 body {
-  display: flex;
+  display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -30,6 +32,9 @@ body {
   background: radial-gradient(circle,
       rgba(0, 0, 0, 0.488) 10%,
       rgba(0, 0, 0, 0) 100%),
-    url(/img/background_earth.jpg) center/cover;
+    url(/img/background_earth.jpg) center/cover no-repeat;
   background-blend-mode: darken;
+  min-height: 100%
 }
+
+/* @media (orientation: landscape) {} */

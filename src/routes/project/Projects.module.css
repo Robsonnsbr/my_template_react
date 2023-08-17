@@ -1,4 +1,4 @@
-.Project {
+.project {
   height: 100%;
   width: 100%;
   background: #1ddb7913;
@@ -7,3 +7,10 @@
   justify-content: center;
   align-items: center;
 }
+
+
+/* @media (max-width: 400px) {
+  .project {
+    width: 60%;
+  }
+} */
