@@ -9,10 +9,9 @@
   overflow: hidden !important;
 }
 
-
-/* @media (height > 690px) {
+/* 
+@media (max-width: 768px) {
   .home {
-    flex-direction: row;
-    background: #04ff0013;
+    overflow: auto;
   }
 } */

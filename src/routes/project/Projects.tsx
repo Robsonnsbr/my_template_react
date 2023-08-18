@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Slider } from "../../components/commons/Slider/Slider";
+import { Slider } from "../../components/commons/slider/Slider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
 import css from "./Projects.module.css";
 
