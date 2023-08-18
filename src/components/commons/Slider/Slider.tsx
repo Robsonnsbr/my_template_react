@@ -1,4 +1,4 @@
-import { SliderProps } from "../../../@types/types";
+import { SliderProps } from "../../../@types/Slider";
 
 import { Swiper } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
