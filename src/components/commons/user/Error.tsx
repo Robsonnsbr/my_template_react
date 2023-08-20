@@ -1,7 +1,10 @@
-export const Error = () => {
+type errorMsg = {
+  errorMsg: string | undefined;
+};
+export const Error = (errorMsg: errorMsg) => {
   return (
     <div>
-      <p>Usuário não encontrado!</p>
+      <p>{errorMsg.errorMsg}</p>
     </div>
   );
 };

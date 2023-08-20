@@ -10,7 +10,7 @@ import { App } from "./App.tsx";
 import { routesPage } from "./routes/exportRoutesPage.tsx";
 const { ErrorPage, Home, About, Projects, ProjectDetails } = routesPage;
 
-import "./index.css";
+import "./global.css";
 
 const router = createBrowserRouter([
   {
