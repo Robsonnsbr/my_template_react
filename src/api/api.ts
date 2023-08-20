@@ -1,33 +1,22 @@
-// import { Error } from "../components/Error";
-// import { UserProps } from "../@types/user";
-
-// export const GetUser = () => {
-//   const loadUser = async (userName: string) => {
-//     const response = await fetch(`https://api.github.com/users/${userName}`);
-//     const data = await response.json();
-//     if (response.status === 404) {
-//       return;
-//     }
-//     const { avatar_url, name, login, followers, following, bio } = data;
-
-//     const userData: UserProps = {
-//       avatar_url,
-//       name,
-//       login,
-//       followers,
-//       following,
-//       bio,
-//     };
-//     return null;
-//   };
-// };
+import { UserProps } from "../@types/user";
 
 export const getUSer = async (userName: string) => {
+  const result: { data?: UserProps; errorMsg?: string } = {};
   try {
     const response = await fetch(`https://api.github.com/users/${userName}`);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log(error);
+
+    if (response.status === 404) {
+      result.errorMsg = `Usuário ${userName} não encontrado!`;
+    } else if (response.status === 403) {
+      result.errorMsg = "Limite de requisição atingido!"; // Autenticar a requisição para evitar esse erro.
+    } else {
+      const data = await response.json();
+      result.data = data;
+    }
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      result.errorMsg = e.message;
+    }
   }
+  return result;
 };
