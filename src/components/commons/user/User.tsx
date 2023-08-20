@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import classes from "./User.module.css";
 import { BsPersonWorkspace } from "react-icons/bs";
-import { UserProps } from "../../../@types/user";
+import { UserProps } from "../../../@types/User";
 
 export const User = ({
   avatar_url,

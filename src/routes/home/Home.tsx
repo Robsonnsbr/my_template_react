@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { UserProps } from "../../@types/user";
+import { UserProps } from "../../@types/User";
 import { routesComponentsUser } from "../../components/exportRoutesComponents";
 import { validateUser } from "../../api/validateUser";
-
+import css from "./Home.module.css";
 const { User, Search, Error } = routesComponentsUser;
 
 export const Home = () => {
@@ -25,7 +25,7 @@ export const Home = () => {
     }
   };
   return (
-    <div id="Home">
+    <div className={css.home}>
       <Search loadUser={loadUser} />
       {user && <User {...user} />}
       {error && <Error errorMsg={errorMsg} />}
