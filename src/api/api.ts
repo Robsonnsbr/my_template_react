@@ -1,4 +1,4 @@
-import { UserProps } from "../@types/user";
+import { UserProps } from "../@types/User";
 
 export const getUSer = async (userName: string) => {
   const result: { data?: UserProps; errorMsg?: string } = {};

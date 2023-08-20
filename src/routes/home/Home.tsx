@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { UserProps } from "../../@types/user";
+import { UserProps } from "../../@types/User";
 import { routesComponentsUser } from "../../components/exportRoutesComponents";
-import { getUSer } from "../../api/api";
-
+import { validateUser } from "../../api/validateUser";
+import css from "./Home.module.css";
 const { User, Search, Error } = routesComponentsUser;
 
 export const Home = () => {
@@ -13,25 +13,19 @@ export const Home = () => {
   const loadUser = async (userName: string) => {
     setError(false);
     setUser(null);
-    try {
-      const fetchedUser = await getUSer(userName);
+    const validationResult = await validateUser(userName);
 
-      if ("errorMsg" in fetchedUser) {
-        setError(true);
-        setErrorMsg(fetchedUser.errorMsg);
-      } else {
-        setUser(fetchedUser.data);
-        setError(false);
-        setErrorMsg("");
-      }
-    } catch (e) {
+    if (validationResult.error) {
       setError(true);
-      setErrorMsg("Ocorreu um erro ao buscar os dados do usuário.");
+      setErrorMsg(validationResult.errorMsg);
+    } else {
+      setUser(validationResult.user);
+      setError(false);
+      setErrorMsg("");
     }
   };
-
   return (
-    <div id="Home">
+    <div className={css.home}>
       <Search loadUser={loadUser} />
       {user && <User {...user} />}
       {error && <Error errorMsg={errorMsg} />}
