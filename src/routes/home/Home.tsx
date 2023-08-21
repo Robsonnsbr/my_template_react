@@ -27,9 +27,9 @@ export const Home = () => {
 
   return (
     <div className={css.home}>
-      <Search loadUser={loadUser} />
       {user && <User {...user} />}
       {error && <Error errorMsg={errorMsg} />}
+      <Search loadUser={loadUser} />
     </div>
   );
 };
