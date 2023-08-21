@@ -20,23 +20,23 @@ export const Search = (loadUser: SearchProps) => {
   };
   return (
     <div className={css.search}>
-      <h2>Busque por um usuário</h2>
-      <div className={css.search_content}>
-        <label htmlFor="Search">
-          Search:{" "}
-          <input
-            type="text"
-            name="Search"
-            id="Search"
-            placeholder="Search User"
-            onChange={(e) => setUsername(e.target.value)}
-            onKeyDown={handleKeyDown}
-          />
-        </label>
-
-        <button onClick={() => loadUser.loadUser(userName)}>
-          <BsSearch />
-        </button>
+      <div className={css.search_container}>
+        <label htmlFor="Search">Search on Github</label>
+        <div className={css.search_content}>
+          <div>
+            <input
+              type="text"
+              name="Search"
+              id="Search"
+              placeholder="Search User"
+              onChange={(e) => setUsername(e.target.value)}
+              onKeyDown={handleKeyDown}
+            />
+          </div>
+          <button onClick={() => loadUser.loadUser(userName)}>
+            <BsSearch />
+          </button>
+        </div>
       </div>
     </div>
   );

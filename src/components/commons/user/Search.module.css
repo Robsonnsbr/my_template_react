@@ -1,6 +1,6 @@
 .search {
-    /* background-color: #2b3566; */
-    padding: 2rem;
+    background-color: #5194e069;
+    padding: 1rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -14,11 +14,22 @@
     color: #9da5d1;
 }
 
-.search_content {
+.search_container label {
+    margin-left: 14%;
+    margin-bottom: 6%;
     display: flex;
-    gap: 0.5rem;
-
+    flex-direction: column;
 }
+
+.search_content {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+}
+
 
 .search_content input,
 button {
@@ -31,7 +42,7 @@ button {
 }
 
 .search_content button {
-    background: #0e1129;
+    background: #5194e069;
     cursor: pointer;
 }
 
