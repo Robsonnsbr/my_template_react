@@ -24,6 +24,7 @@ export const Home = () => {
       setErrorMsg("");
     }
   };
+
   return (
     <div className={css.home}>
       <Search loadUser={loadUser} />
