@@ -1,4 +1,4 @@
-import { useState, KeyboardEvent } from "react";
+import { useState, KeyboardEvent, useEffect } from "react";
 import { BsSearch } from "react-icons/bs";
 import css from "./Search.module.css";
 
@@ -7,7 +7,11 @@ type SearchProps = {
 };
 
 export const Search = (loadUser: SearchProps) => {
+  //TODO: remover nome do input após busca
   const [userName, setUsername] = useState("");
+  useEffect(() => {
+    loadUser.loadUser("robsonnsbr");
+  }, []);
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -17,7 +21,6 @@ export const Search = (loadUser: SearchProps) => {
   return (
     <div className={css.search}>
       <h2>Busque por um usuário</h2>
-      <p>ROBSONNSBR</p>
       <div className={css.search_content}>
         <label htmlFor="Search">
           Search:{" "}

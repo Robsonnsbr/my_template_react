@@ -8,7 +8,8 @@ import {
 
 import { App } from "./App.tsx";
 import { routesPage } from "./routes/exportRoutesPage.tsx";
-const { ErrorPage, Home, About, Projects, ProjectDetails } = routesPage;
+const { ErrorPage, Home, About, Projects, ProjectDetails, Contact } =
+  routesPage;
 
 import "./global.css";
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/my_template_react/oldProject",
         element: <Navigate to="/my_template_react/Project" />,
+      },
+      {
+        path: "/my_template_react/Contact",
+        element: <Contact />,
       },
     ],
   },
