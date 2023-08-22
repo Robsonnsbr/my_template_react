@@ -2,7 +2,7 @@ import { useState } from "react";
 import { UserProps } from "../../@types/User";
 import { routesComponentsUser } from "../../components/exportRoutesComponents";
 import { validateUser } from "../../api/validateUser";
-import css from "./Home.module.css";
+import { motion } from "framer-motion";
 const { User, Search, Error } = routesComponentsUser;
 
 export const Home = () => {
@@ -26,10 +26,10 @@ export const Home = () => {
   };
 
   return (
-    <div className={css.home}>
+    <motion.div>
       {user && <User {...user} />}
       {error && <Error errorMsg={errorMsg} />}
       <Search loadUser={loadUser} />
-    </div>
+    </motion.div>
   );
 };

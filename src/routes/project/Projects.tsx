@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import { Slider } from "../../components/commons/slider/Slider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
+
 import css from "./Projects.module.css";
+
+import { routesComponents } from "../../components/exportRoutesComponents";
+const { Slider } = routesComponents;
 
 export const Projects = () => {
   const settings: SwiperProps = {
@@ -24,7 +27,7 @@ export const Projects = () => {
             {""}
             {/* Add key here */}
             <p>
-              <Link to={`/my_template_react/Project/${id}`}>Project: {id}</Link>
+              <Link to={`../Project/${id}`}>Project: {id}</Link>
             </p>
           </SwiperSlide>
         ))}

@@ -1,8 +1,7 @@
 import { Main } from "./commons/Main";
-import { Navbar } from "./commons/navbar/Navbar";
-import { Footer } from "./commons/footer/Footer";
-
-import { Slider } from "./commons/slider/Slider";
+import { Navbar } from "./commons/layout/navbar/Navbar";
+import { Footer } from "./commons/layout/footer/Footer";
+import { Slider } from "./commons/layout/slider/Slider";
 
 import { User } from "./commons/user/User";
 import { Search } from "./commons/user/Search";
