@@ -28,11 +28,11 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "Projects",
+        path: "projects",
         element: <Projects />,
       },
       {
-        path: "Project/:id",
+        path: "project/:id",
         element: <ProjectDetails />,
       },
       {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Navigate to="../Project" />,
       },
       {
-        path: "Contact",
+        path: "contact",
         element: <Contact />,
       },
     ],

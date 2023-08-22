@@ -4,10 +4,10 @@ import css from "./Navbar.module.css";
 export const Navbar = () => {
   return (
     <nav className={css.navbar}>
-      <Link to="./">Home</Link>
-      <Link to="about">About</Link>
-      <Link to="projects">Projects</Link>
-      <Link to="contact">Contact</Link>
+      <Link to="./">home</Link>
+      <Link to="about">about</Link>
+      <Link to="projects">projects</Link>
+      <Link to="contact">contact</Link>
       <Link to="https://github.com/Robsonnsbr">Return to GitHub</Link>
     </nav>
   );
