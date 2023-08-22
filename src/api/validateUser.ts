@@ -1,8 +1,8 @@
-import { getUSer } from "./api";
+import { getUser } from "./api";
 
 export const validateUser = async (userName: string) => {
   try {
-    const fetchedUser = await getUSer(userName);
+    const fetchedUser = await getUser(userName);
     if ("errorMsg" in fetchedUser) {
       return { error: true, errorMsg: fetchedUser.errorMsg };
     } else {
