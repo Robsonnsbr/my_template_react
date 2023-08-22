@@ -1,5 +1,4 @@
 .user {
-    /* background-color: #2b3566; */
     padding: 2rem;
     border-radius: 1rem;
     display: flex;
@@ -30,6 +29,18 @@
 
 .user_stats div:first-child {
     border-right: 1px solid #ffffff;
+}
+
+@media (max-width: 450px) {
+    .user_stats div:first-child {
+        border-right: none;
+    }
+
+    .user_stats div {
+        display: grid;
+        padding: 0 1rem;
+        gap: 10%
+    }
 }
 
 .user_number {

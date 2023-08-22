@@ -15,39 +15,37 @@ import "./global.css";
 
 const router = createBrowserRouter([
   {
-    path: "/my_template_react",
+    path: "/my_template_react/*", // Adicione o curinga "*" aqui
     element: <App />,
     errorElement: <ErrorPage />,
-    //TODO: verificar porq ele não entra no ErrorPage? funciona só com o caminho base "/"?
     children: [
       {
-        path: "/my_template_react",
+        path: "*",
         element: <Home />,
       },
       {
-        path: "/my_template_react/about",
+        path: "about",
         element: <About />,
       },
       {
-        path: "/my_template_react/Projects",
+        path: "Projects",
         element: <Projects />,
       },
       {
-        path: "/my_template_react/Project/:id",
+        path: "Project/:id",
         element: <ProjectDetails />,
       },
       {
-        path: "/my_template_react/oldProject",
-        element: <Navigate to="/my_template_react/Project" />,
+        path: "oldProject",
+        element: <Navigate to="../Project" />,
       },
       {
-        path: "/my_template_react/Contact",
+        path: "Contact",
         element: <Contact />,
       },
     ],
   },
 ]);
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />

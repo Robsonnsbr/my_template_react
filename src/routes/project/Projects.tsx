@@ -24,7 +24,7 @@ export const Projects = () => {
             {""}
             {/* Add key here */}
             <p>
-              <Link to={`/my_template_react/Project/${id}`}>Project: {id}</Link>
+              <Link to={`../Project/${id}`}>Project: {id}</Link>
             </p>
           </SwiperSlide>
         ))}
