@@ -1,7 +1,8 @@
 import { UserProps } from "../@types/User";
 
-export const getUSer = async (userName: string) => {
+export const getUser = async (userName: string) => {
   const result: { data?: UserProps; errorMsg?: string } = {};
+
   try {
     const response = await fetch(`https://api.github.com/users/${userName}`);
 
@@ -18,5 +19,6 @@ export const getUSer = async (userName: string) => {
       result.errorMsg = e.message;
     }
   }
+
   return result;
 };
