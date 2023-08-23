@@ -29,7 +29,7 @@
 p {
   color: #000;
   font-family: "Inter", sans-serif, Arial, Helvetica, sans-serif !important;
-  text-shadow: 1px 1px 1px #0000004e;
+  text-shadow: 0px 0px 1px #0000004e;
 }
 
 .content h1 {
@@ -50,9 +50,6 @@ p {
   background-color: transparent;
 }
 
-.about button {
+.about a {
   margin-bottom: 1rem;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
 }

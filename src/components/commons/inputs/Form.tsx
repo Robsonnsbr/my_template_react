@@ -1,12 +1,17 @@
 import { useState } from "react";
 import css from "./Form.module.css";
 import { enviarEmail } from "../../../api/sendEmail";
+import { Button } from "./Button";
 
 export const Form = () => {
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const handleButtonClick = () => {
+    enviarEmail({ name, subject, message, email });
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -56,14 +61,11 @@ export const Form = () => {
           />
         </div>
         <div>
-          <button
+          <Button
             type="submit"
-            onClick={() => {
-              enviarEmail({ name, subject, message, email });
-            }}
-          >
-            Enviar
-          </button>
+            value="Enviar"
+            customFunction={handleButtonClick}
+          />
         </div>
       </form>
     </div>
