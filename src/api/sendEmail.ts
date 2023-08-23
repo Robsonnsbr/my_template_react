@@ -30,4 +30,5 @@ export const enviarEmail = ({ name, subject, message, email }: EmailProps) => {
     });
 };
 
-//TODO: Tratar erros com o catch. err.
+//TODO: Tratar erros com o catch. err. enviado não enviado.
+//TODO: não deixar usuário apertar repetidamente o botão. tratar se ouve alteração para reenvio da mesma msg
