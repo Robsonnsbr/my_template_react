@@ -8,3 +8,5 @@ export const Contact = () => {
     </div>
   );
 };
+
+//TODO: ao voltar de uma pagina externa a pagina contact da erro. tratar
