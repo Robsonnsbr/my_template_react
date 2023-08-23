@@ -9,10 +9,3 @@
   align-items: center;
   overflow: hidden !important;
 }
-
-/* 
-@media (max-width: 768px) {
-  .home {
-    overflow: auto;
-  }
-} */
