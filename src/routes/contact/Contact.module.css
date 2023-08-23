@@ -11,6 +11,12 @@
     overflow: hidden !important;
 }
 
+.contact h1 {
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
 .content {
     border-radius: .5rem;
     padding: 5px;
