@@ -8,19 +8,20 @@
   background: #5194e069;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   overflow: hidden !important;
+  /* margin: 2rem; */
 }
 
 .content {
   border-radius: .5rem;
   padding: 5px;
   background: #ffffffd3;
-  width: 90%;
-  justify-content: top;
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
   Overflow: overlay;
-  margin: 1.2rem 0;
   box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.778);
 }
 
@@ -49,7 +50,9 @@ p {
   background-color: transparent;
 }
 
-button {
-  background: #0e1129;
-  color: #fff;
+.about button {
+  margin-bottom: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
 }

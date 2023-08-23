@@ -9,11 +9,11 @@ export const Main = (): React.ReactElement => {
   return (
     <motion.main
       className={css.main}
+      key={location.pathname}
       initial={{ opacity: 0, x: 1000 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ x: -window.innerWidth }}
       transition={{ duration: 0.5 }}
-      key={location.pathname}
     >
       <Outlet />
     </motion.main>

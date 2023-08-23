@@ -4,7 +4,9 @@ const { Form } = routesComponents;
 export const Contact = () => {
   return (
     <div className={css.contact}>
-      <Form />
+      <div className={css.content}>
+        <Form />
+      </div>
     </div>
   );
 };

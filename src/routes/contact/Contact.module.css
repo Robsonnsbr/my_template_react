@@ -1,5 +1,24 @@
 .contact {
     border-radius: .5rem;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
     background: #5194e069;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden !important;
+}
+
+.content {
+    border-radius: .5rem;
+    padding: 5px;
+    background: #ffffffd3;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 1.2rem 0;
+    border: 1px solid #ccc;
 }
