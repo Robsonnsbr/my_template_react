@@ -1,4 +1,5 @@
 .contact {
-    background: rgba(0, 255, 76, 0.325);
+    border-radius: .5rem;
+    background: #5194e069;
     text-align: center;
 }

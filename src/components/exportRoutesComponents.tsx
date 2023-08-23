@@ -7,6 +7,8 @@ import { User } from "./commons/user/User";
 import { Search } from "./commons/user/Search";
 import { Error } from "./commons/user/Error";
 
-export const routesComponents = { Main, Navbar, Footer, Slider };
+import { Form } from "./commons/inputs/Form";
+
+export const routesComponents = { Main, Navbar, Footer, Slider, Form };
 
 export const routesComponentsUser = { User, Search, Error };

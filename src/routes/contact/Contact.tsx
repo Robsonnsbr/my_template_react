@@ -1,9 +1,10 @@
 import css from "./Contact.module.css";
-
+import { routesComponents } from "../../components/exportRoutesComponents";
+const { Form } = routesComponents;
 export const Contact = () => {
   return (
     <div className={css.contact}>
-      <h1>Contact</h1>
+      <Form />
     </div>
   );
 };

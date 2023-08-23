@@ -1,7 +1,8 @@
 .project {
   height: 100%;
   width: 100%;
-  background: #1ddb7913;
+  background: #5194e069;
+  border-radius: .5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,4 +1,4 @@
-import { getUser } from "./api";
+import { getUser } from "./getUser";
 
 export const validateUser = async (userName: string) => {
   try {
