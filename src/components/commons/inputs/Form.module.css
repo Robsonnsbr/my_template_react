@@ -1,0 +1,41 @@
+.container {
+    text-shadow: 0px 0px 1px #0000004e;
+    display: contents;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+}
+
+.container form>div {
+    padding: 10px;
+}
+
+.container label {
+    text-shadow: 0px 0px 1px #0000004e;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container input,
+.container textarea {
+    text-shadow: 0 0 0 #0000004e;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #000;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.container textarea {
+    min-height: 100px;
+    max-height: 261px;
+    max-width: 418px;
+    line-height: 1.5;
+}

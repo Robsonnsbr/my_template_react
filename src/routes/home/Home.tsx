@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { UserProps } from "../../@types/User";
+import { UserProps } from "../../@types/UserProps";
 import { routesComponentsUser } from "../../components/exportRoutesComponents";
 import { validateUser } from "../../api/validateUser";
 import { motion } from "framer-motion";

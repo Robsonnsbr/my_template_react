@@ -1,3 +1,6 @@
+import { routesComponents } from "../../components/exportRoutesComponents";
+const { Button } = routesComponents;
+
 import css from "./About.module.css";
 export const About = () => {
   return (
@@ -44,7 +47,7 @@ export const About = () => {
         type="application/pdf"
       >
         {" "}
-        <button>Download CV</button>
+        <Button value={"DOWNLOAD CV"} />
       </a>
     </div>
   );
