@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: top;
     gap: 1rem;
-    max-height: 75%;
+    max-height: 100%;
 }
 
 .user img {
@@ -62,7 +62,6 @@
 
     .user {
         justify-content: center;
-        margin-top: 10px;
         padding: 1rem;
         gap: .7rem;
     }
