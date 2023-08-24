@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: top;
     gap: 1rem;
-    max-height: 75%;
+    max-height: 100%;
 }
 
 .user img {
@@ -32,40 +32,22 @@
     border-right: 1px solid #ffffff;
 }
 
-@media (max-width: 450px) {
-    .user_stats div:first-child {
-        border-right: none;
-    }
 
-    .user_stats div {
-        display: flex;
-        flex-direction: row;
-        padding: .2rem 1rem;
-        gap: 5px;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .user {
-        padding: 1rem;
-        gap: .7rem;
-    }
-}
 
 
 .user_number {
     text-align: center;
     background-color: #5194e069;
-    /* margin: 2px; */
-    /* border-radius: .2rem; */
-    /* padding: .2rem; */
+    margin: 2px;
+    border-radius: .2rem;
+    padding: .2rem;
 }
 
 .user_stats_bio {
     display: flex;
     align-items: center;
-    gap: .4rem
+    gap: .4rem;
+
 }
 
 .user_stats_bio p:nth-child(2) {
@@ -88,4 +70,34 @@
     filter: drop-shadow(1px 1px 1px #00000040);
     font-size: 1.3rem;
 
+}
+
+@media (max-width: 400px) {
+
+    .user {
+        padding: 1rem;
+        gap: .7rem;
+    }
+
+    .user_number {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .user_stats div {
+        display: inline-block;
+        padding: 0px 10px;
+        gap: 5px;
+    }
+
+    .user {
+        justify-content: center;
+        padding: 1rem;
+        gap: .7rem;
+        padding: 10px;
+    }
+
+    .user_stats_bio {
+        margin: -10px 0px;
+    }
 }
