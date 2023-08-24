@@ -1,7 +1,7 @@
 import { useState } from "react";
 import css from "./Form.module.css";
-import { enviarEmail } from "../../../api/sendEmail";
-import { Button } from "./Button";
+import { enviarEmail } from "../../../../api/sendEmail";
+import { Button } from "../Button";
 
 export const Form = () => {
   const [name, setName] = useState("");

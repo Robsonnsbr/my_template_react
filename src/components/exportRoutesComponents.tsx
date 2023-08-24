@@ -7,7 +7,7 @@ import { User } from "./commons/user/User";
 import { Search } from "./commons/user/Search";
 import { Error } from "./commons/user/Error";
 
-import { Form } from "./commons/inputs/Form";
+import { Form } from "./commons/inputs/form/Form";
 import { Button } from "./commons/inputs/Button";
 
 export const routesComponents = { Main, Navbar, Footer, Slider, Form, Button };
