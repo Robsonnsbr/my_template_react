@@ -4,6 +4,8 @@ import { routesComponentsUser } from "../../components/exportRoutesComponents";
 import { validateUser } from "../../api/validateUser";
 
 import css from "./Home.module.css";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const { User, Search, Error } = routesComponentsUser;
 
@@ -26,13 +28,32 @@ export const Home = () => {
       setErrorMsg("");
     }
   };
-
+  const location = useLocation();
+  const style = {
+    overflow: "hidden",
+  };
   return (
-    <div className={css.home}>
+    <div className={css.home} style={style}>
       <div className={css.content}>
-        {user && <User {...user} />}
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0, y: -1000 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ y: -window.innerWidth }}
+          transition={{ duration: 1 }}
+        >
+          {user && <User {...user} />}
+        </motion.div>
         {error && <Error errorMsg={errorMsg} />}
-        <Search loadUser={loadUser} />
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0, y: 1000 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ y: -window.innerWidth }}
+          transition={{ duration: 1 }}
+        >
+          <Search loadUser={loadUser} />
+        </motion.div>
       </div>
     </div>
   );

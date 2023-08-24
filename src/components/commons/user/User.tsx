@@ -29,6 +29,7 @@ export const User = ({
         <p>Bio:</p>
         <p>{bio}</p>
       </div>
+      {/* TODO: passar o user dinamicamente */}
       <Link to={"https://github.com/Robsonnsbr"} target="_blank">
         Ver melhores projetos
         <BsPersonWorkspace />
