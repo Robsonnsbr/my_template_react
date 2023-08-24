@@ -24,6 +24,7 @@ html,
 body {
   background: black;
   height: 100vh !important;
+  overflow-x: hidden;
 }
 
 body {

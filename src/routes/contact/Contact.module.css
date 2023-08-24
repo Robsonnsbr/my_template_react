@@ -8,7 +8,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden !important;
 }
 
 .contact h1 {
@@ -18,12 +17,13 @@
 }
 
 .content {
+
     border-radius: .5rem;
     padding: 5px;
     width: 90%;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: auto;
     margin: 1.2rem 0;
     border: 1px solid #ccc;
     background: #ffffffd3;
