@@ -29,7 +29,7 @@ export const User = ({
         <p>Bio:</p>
         <p>{bio}</p>
       </div>
-      <Link to={`/repos/${login}`}>
+      <Link to={"https://github.com/Robsonnsbr"} target="_blank">
         Ver melhores projetos
         <BsPersonWorkspace />
       </Link>

@@ -46,7 +46,6 @@ export const About = () => {
         download="Curriculo_Robson.pdf"
         type="application/pdf"
       >
-        {" "}
         <Button value={"DOWNLOAD CV"} />
       </a>
     </div>
