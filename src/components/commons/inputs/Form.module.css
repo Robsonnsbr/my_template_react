@@ -39,3 +39,20 @@
     max-width: 418px;
     line-height: 1.5;
 }
+
+@media(max-width: 450px) {
+    .container textarea {
+        min-height: 50px;
+        min-width: 272px;
+        max-width: 307px;
+        line-height: 1;
+    }
+}
+
+@media(max-width: 400px) {
+    .container textarea {
+        min-height: 50px;
+        max-width: 273px;
+        line-height: 1;
+    }
+}
