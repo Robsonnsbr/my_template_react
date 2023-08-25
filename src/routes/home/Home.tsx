@@ -5,7 +5,6 @@ import { validateUser } from "../../api/validateUser";
 
 import css from "./Home.module.css";
 import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
 
 const { User, Search, Error } = routesComponentsUser;
 
@@ -28,7 +27,6 @@ export const Home = () => {
       setErrorMsg("");
     }
   };
-  const location = useLocation();
   const style = {
     overflow: "hidden",
   };
@@ -36,7 +34,6 @@ export const Home = () => {
     <div className={css.home} style={style}>
       <div className={css.content}>
         <motion.div
-          key={location.pathname}
           initial={{ opacity: 0, y: -1000 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ y: -window.innerWidth }}
@@ -46,7 +43,6 @@ export const Home = () => {
         </motion.div>
         {error && <Error errorMsg={errorMsg} />}
         <motion.div
-          key={location.pathname}
           initial={{ opacity: 0, y: 1000 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ y: -window.innerWidth }}
