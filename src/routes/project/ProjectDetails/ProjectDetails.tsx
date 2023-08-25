@@ -6,6 +6,7 @@ import css from "./ProjectDetails.module.css";
 
 export const ProjectDetails = () => {
   const { id } = useParams();
+  console.log(id);
   return (
     <div className={css.ProjectDetails}>
       Exibindo informações do projeto: {id}
