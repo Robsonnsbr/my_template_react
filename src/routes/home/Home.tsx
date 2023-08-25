@@ -12,6 +12,7 @@ export const Home = () => {
   const [user, setUser] = useState<UserProps | undefined | null>(null);
   const [error, setError] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string | undefined>("");
+  //TODO: add loading...
 
   const loadUser = async (userName: string) => {
     setError(false);
