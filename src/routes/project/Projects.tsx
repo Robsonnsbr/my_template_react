@@ -31,7 +31,7 @@ export const Projects = () => {
 
   //TODO: não estou usando o setProjects aqui, mas vou usar..eu acho..
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [projects, setProjects] = useState<ProjectProps[]>(arrayProjects);
+  const [projects, _] = useState<ProjectProps[]>(arrayProjects);
 
   return (
     <div className={css.project}>
