@@ -1,6 +1,6 @@
 import { useState } from "react";
 import css from "./Form.module.css";
-import { enviarEmail } from "../../../../api/sendEmail";
+import { enviarEmail } from "../../../../services/sendEmail";
 import { Button } from "../Button";
 
 export const Form = () => {

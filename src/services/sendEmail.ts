@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 
-import { EmailProps } from "../@types/EmailProps";
+import { EmailProps } from "../../@types/EmailProps";
 
 export const enviarEmail = ({ name, subject, message, email }: EmailProps) => {
   const templateParams = {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { UserProps } from "../../@types/UserProps";
 import { routesComponentsUser } from "../../components/exportRoutesComponents";
-import { validateUser } from "../../api/validateUser";
+import { validateUser } from "../../services/validateUser";
 
 import css from "./Home.module.css";
 import { motion } from "framer-motion";
