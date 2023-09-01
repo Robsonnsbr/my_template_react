@@ -48,3 +48,12 @@ export const Projects = () => {
     </div>
   );
 };
+
+// type InputProps = {
+//   placeholder?: string;
+// };
+
+// const Input = ({ placeholder = "" }: InputProps) => {
+//   return {};
+// };
+// //desestruturação e inicialização

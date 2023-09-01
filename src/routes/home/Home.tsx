@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { UserProps } from "../../@types/UserProps";
 import { routesComponentsUser } from "../../components/exportRoutesComponents";
-import { validateUser } from "../../api/validateUser";
+import { validateUser } from "../../services/validateUser";
 
 import css from "./Home.module.css";
 import { motion } from "framer-motion";
@@ -12,6 +12,7 @@ export const Home = () => {
   const [user, setUser] = useState<UserProps | undefined | null>(null);
   const [error, setError] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string | undefined>("");
+  //TODO: add loading...
 
   const loadUser = async (userName: string) => {
     setError(false);
