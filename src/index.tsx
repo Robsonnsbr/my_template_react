@@ -15,7 +15,7 @@ import "./global.css";
 
 const router = createBrowserRouter([
   {
-    path: "/my_template_react/*", // Adicione o curinga "*" aqui
+    path: "/portfolio/*", // Adicione o curinga "*" aqui
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
