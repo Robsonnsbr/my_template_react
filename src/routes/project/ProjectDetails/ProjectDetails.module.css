@@ -8,6 +8,13 @@
   align-items: center;
 }
 
+span {
+  font-family: monospace;
+  font-size: 15px;
+  color: rgba(255, 0, 0, 0.415);
+
+}
+
 button {
   text-shadow: none;
   font-weight: 500;
