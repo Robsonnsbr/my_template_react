@@ -41,11 +41,11 @@ export const ProjectDetails = () => {
     <div className={css.ProjectDetails}>
       Exibindo informações do projeto: {`${name} id ${id}`}
       {project && <div>{project.full_name}</div>}
-      <button>
-        <Link className="link" to={"/portfolio/projects"}>
+      <Link className="link" to={"/portfolio/projects"}>
+        <button>
           <TbArrowBackUp />
-        </Link>
-      </button>
+        </button>
+      </Link>
       <Iframe
         url="https://robsonnsbr.github.io/loginReact/"
         width="640px"
