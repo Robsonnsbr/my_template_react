@@ -20,6 +20,10 @@
   justify-content: center;
   align-items: center;
 }
+.information {
+  overflow: auto;
+  color: red;
+}
 
 a:hover {
   color: blue;
