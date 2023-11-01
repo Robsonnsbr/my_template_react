@@ -65,6 +65,12 @@ export const ProjectDetails = () => {
           <Link to="https://atacadao-app.vercel.app/Login" target="_blank">
             Link do projeto na Vercel
           </Link>
+          <p style={{ color: "#fff", margin: "20px", textAlign: "justify" }}>
+            Este projeto não é compatível com dispositivos móveis e não foi
+            desenvolvido com essa finalidade. A intenção do sistema é ser
+            utilizado exclusivamente em dispositivos desktop, sendo
+            contraditório seu uso em dispositivos móveis
+          </p>
         </div>
       </div>
     </div>
