@@ -48,7 +48,8 @@ export const Projects = () => {
   return (
     <div className={css.project}>
       <h1>Page Projects</h1>
-      <span>AVISO: Todas as chamadas resultaram na página loginReact</span>
+      <p>AVISO:</p>
+      <p> Todas as chamadas resultaram no mesmo projeto. app-atacadão </p>
       {projects && (
         <Slider settings={settings}>
           {projects.map((project: ProjectProps) => (

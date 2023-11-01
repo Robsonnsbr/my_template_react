@@ -38,23 +38,35 @@ export const ProjectDetails = () => {
   // const projectName = location.state.projectName;
   // console.log(projectName);
   return (
-    <div className={css.ProjectDetails}>
-      Exibindo informações do projeto: {`${name} id ${id}`}
-      {project && <div>{project.full_name}</div>}
-      <Link className="link" to={"/portfolio/projects"}>
-        <button>
-          <TbArrowBackUp />
-        </button>
-      </Link>
-      <Iframe
-        url="https://robsonnsbr.github.io/loginReact/"
-        width="640px"
-        height="100%"
-        id=""
-        className=""
-        display="block"
-        position="relative"
-      />
+    <div className={css.containerProject}>
+      <div className={css.ProjectDetails}>
+        Exibindo informações do projeto: {`${name} id ${id}`}
+        {project && <div>{project.full_name}</div>}
+        <Link className="link" to={"/portfolio/projects"}>
+          <button>
+            <TbArrowBackUp />
+          </button>
+        </Link>
+        <Iframe
+          url="https://atacadao-app.vercel.app/Login"
+          width="750px"
+          height="100%"
+          id=""
+          className=""
+          display="block"
+          position="relative"
+        />
+      </div>
+      <div style={{ width: "100%" }}>
+        <h3 style={{ margin: "20px", textAlign: "center" }}>
+          INFORMAÇÕES DO PROJETO:
+        </h3>
+        <div style={{ margin: "20px", textAlign: "center" }}>
+          <Link to="https://atacadao-app.vercel.app/Login" target="_blank">
+            Link do projeto na Vercel
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
