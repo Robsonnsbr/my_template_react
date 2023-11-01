@@ -1,14 +1,42 @@
 import { Link } from "react-router-dom";
-import { SwiperProps, SwiperSlide } from "swiper/react";
-import { v4 as uuidv4 } from "uuid";
+import { SwiperSlide } from "swiper/react";
 import css from "./Projects.module.css";
 
 import { routesComponents } from "../../components/exportRoutesComponents";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getProjects } from "../../services/getProjects";
 const { Slider } = routesComponents;
 
+interface ProjectProps {
+  id?: number;
+  name?: string;
+  full_name?: string;
+  stringify?: string;
+}
+
 export const Projects = () => {
-  const settings: SwiperProps = {
+  const [projects, setProjects] = useState<ProjectProps[] | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await getProjects();
+        const data: ProjectProps[] | unknown = response.data;
+
+        if (Array.isArray(data)) {
+          setProjects(data);
+        } else {
+          console.error(
+            "Erro: os dados obtidos não são do tipo ProjectProps[]"
+          );
+        }
+      } catch (error) {
+        console.error("Erro ao obter os projetos:", error);
+      }
+    })();
+  }, []);
+
+  const settings = {
     spaceBetween: 50,
     slidesPerView: 3,
     navigation: true,
@@ -17,43 +45,24 @@ export const Projects = () => {
     },
   };
 
-  interface ProjectProps {
-    id: string;
-    title: string;
-  }
-
-  const arrayProjects: ProjectProps[] = [
-    { id: uuidv4(), title: "Projeto teste" },
-    { id: uuidv4(), title: "Projeto teste" },
-    { id: uuidv4(), title: "Projeto teste" },
-    { id: uuidv4(), title: "Projeto teste" },
-  ];
-
-  //TODO: não estou usando o setProjects aqui, mas vou usar..eu acho..
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [projects, _] = useState<ProjectProps[]>(arrayProjects);
-
   return (
     <div className={css.project}>
       <h1>Page Projects</h1>
-      <Slider settings={settings}>
-        {projects.map((project) => (
-          <SwiperSlide key={project.id}>
-            <p>
-              <Link to={`../Project/${project.id}`}>{project.title}</Link>
-            </p>
-          </SwiperSlide>
-        ))}
-      </Slider>
+      <p>AVISO:</p>
+      <p> Todas as chamadas resultaram no mesmo projeto. app-atacadão </p>
+      {projects && (
+        <Slider settings={settings}>
+          {projects.map((project: ProjectProps) => (
+            <SwiperSlide key={project.id}>
+              <p>
+                <Link to={`../Project/${project.id}/${project.name}`}>
+                  {project.name}
+                </Link>
+              </p>
+            </SwiperSlide>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };
-
-// type InputProps = {
-//   placeholder?: string;
-// };
-
-// const Input = ({ placeholder = "" }: InputProps) => {
-//   return {};
-// };
-// //desestruturação e inicialização
