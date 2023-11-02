@@ -64,8 +64,8 @@ export const Projects = () => {
       </div>
       <div style={{ margin: "2px" }}>
         <span>
-          AVISO: Todas as chamadas são para o mesmo projeto. Para projetos que
-          em OFF acesse:{" "}
+          AVISO: Todas as chamadas são para o mesmo projeto. Para projetos em
+          OFF acesse:{" "}
           <Link
             style={{
               fontFamily: "monospace",
