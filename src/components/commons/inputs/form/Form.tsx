@@ -18,6 +18,7 @@ export const Form = () => {
     console.log("Dados do formulário:", { subject, name, email, message });
   };
 
+  //TODO: Limpar inputs
   return (
     <div className={css.container}>
       <form onSubmit={handleSubmit}>
