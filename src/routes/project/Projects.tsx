@@ -46,23 +46,38 @@ export const Projects = () => {
   };
 
   return (
-    <div className={css.project}>
-      <h1>Page Projects</h1>
-      <p>AVISO:</p>
-      <p> Todas as chamadas resultaram no mesmo projeto. app-atacadão </p>
-      {projects && (
-        <Slider settings={settings}>
-          {projects.map((project: ProjectProps) => (
-            <SwiperSlide key={project.id}>
-              <p>
-                <Link to={`../Project/${project.id}/${project.name}`}>
-                  {project.name}
-                </Link>
-              </p>
-            </SwiperSlide>
-          ))}
-        </Slider>
-      )}
-    </div>
+    <>
+      <div className={css.project}>
+        {projects && (
+          <Slider settings={settings}>
+            {projects.map((project: ProjectProps) => (
+              <SwiperSlide key={project.id}>
+                <p>
+                  <Link to={`../Project/${project.id}/${project.name}`}>
+                    {project.name}
+                  </Link>
+                </p>
+              </SwiperSlide>
+            ))}
+          </Slider>
+        )}
+      </div>
+      <div style={{ margin: "2px" }}>
+        <span>
+          AVISO: Todas as chamadas são para o mesmo projeto. Para projetos que
+          em OFF acesse:{" "}
+          <Link
+            style={{
+              fontFamily: "monospace",
+              fontSize: "15px",
+            }}
+            to="https://github.com/Robsonnsbr"
+            target="_blank"
+          >
+            github.com/Robsonnsbr
+          </Link>
+        </span>
+      </div>
+    </>
   );
 };

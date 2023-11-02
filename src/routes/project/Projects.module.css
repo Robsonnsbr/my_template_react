@@ -7,4 +7,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & span {
+    font-family: monospace;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.415);
+  
+  }
+
 }
