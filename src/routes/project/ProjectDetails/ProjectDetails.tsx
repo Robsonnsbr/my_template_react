@@ -24,7 +24,6 @@ export const ProjectDetails = () => {
 
         if (data) {
           setProject(data);
-          // console.log(data);
         } else {
           console.error("Erro: os dados obtidos não são do tipo ProjectProps");
         }

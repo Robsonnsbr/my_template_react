@@ -1,6 +1,6 @@
 import { useState } from "react";
 import css from "./Form.module.css";
-// import { enviarEmail } from "../../../../services/sendEmail";
+import { enviarEmail } from "../../../../services/sendEmail";
 import { Button } from "../Button";
 
 type customError = {
@@ -40,7 +40,7 @@ export const Form = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (validarInputs()) {
-      // enviarEmail({ name, subject, message, email });
+      enviarEmail({ name, subject, message, email });
       clearInputs();
       btnSubmit.disabled = true;
       btnSubmit.style.opacity = "0.2";

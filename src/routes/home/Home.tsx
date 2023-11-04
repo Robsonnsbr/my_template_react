@@ -13,7 +13,6 @@ export const Home = () => {
   const [error, setError] = useState<boolean>(false);
   const [errorMsg, setErrorMsg] = useState<string | undefined>("");
   //TODO: add loading...
-
   const loadUser = async (userName: string) => {
     setError(false);
     setUser(null);
@@ -28,12 +27,13 @@ export const Home = () => {
       setErrorMsg("");
     }
   };
+
   const style = {
     overflow: "hidden",
   };
   return (
     <div className={css.home} style={style}>
-      <div className={css.content}>
+      <section className={css.content}>
         <motion.div
           initial={{ opacity: 0, y: -1000 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export const Home = () => {
         >
           <Search loadUser={loadUser} />
         </motion.div>
-      </div>
+      </section>
     </div>
   );
 };

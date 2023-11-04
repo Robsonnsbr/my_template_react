@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import css from "./User.module.css";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { UserProps } from "../../../@types/UserProps";
-
+import { useEffect, useState } from "react";
 export const User = ({
   avatar_url,
   login,
@@ -11,6 +11,16 @@ export const User = ({
   following,
   bio,
 }: UserProps) => {
+  const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    if (login === "Robsonnsbr") {
+      setUrl("https://atacadao-app.vercel.app/Login");
+    } else {
+      setUrl(`https://github.com/${login}?tab=repositories`);
+    }
+  }, [login]);
+
   return (
     <div className={css.user}>
       <img src={avatar_url} alt={login} />
@@ -29,8 +39,7 @@ export const User = ({
         <p>Bio:</p>
         <p>{bio}</p>
       </div>
-      {/* TODO: passar o user dinamicamente */}
-      <Link to={"https://github.com/Robsonnsbr"} target="_blank">
+      <Link to={url} target="_blank">
         Ver melhores projetos
         <BsPersonWorkspace />
       </Link>
