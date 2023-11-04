@@ -69,6 +69,7 @@ export const Form = () => {
             id="name"
             value={name}
             onChange={(event) => setName(event.target.value)}
+            required
           />
         </div>
         <div>
