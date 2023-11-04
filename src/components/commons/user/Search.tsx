@@ -6,18 +6,25 @@ type SearchProps = {
   loadUser: (userName: string) => Promise<void>;
 };
 
-export const Search = (loadUser: SearchProps) => {
+export const Search = ({ loadUser }: SearchProps) => {
   //TODO: remover nome do input após busca
   const [userName, setUsername] = useState("");
+
   useEffect(() => {
-    loadUser.loadUser("robsonnsbr");
+    loadUser("robsonnsbr");
   }, []);
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
-      loadUser.loadUser(userName);
+      loadUser(userName);
+      setUsername("");
     }
   };
+  const handleButtonClick = () => {
+    loadUser(userName);
+    setUsername("");
+  };
+
   return (
     <div className={css.search}>
       <div className={css.search_container}>
@@ -29,11 +36,12 @@ export const Search = (loadUser: SearchProps) => {
               name="Search"
               id="Search"
               placeholder="Search User"
+              value={userName}
               onChange={(e) => setUsername(e.target.value)}
               onKeyDown={handleKeyDown}
             />
           </div>
-          <button onClick={() => loadUser.loadUser(userName)}>
+          <button onClick={handleButtonClick}>
             <BsSearch />
           </button>
         </div>

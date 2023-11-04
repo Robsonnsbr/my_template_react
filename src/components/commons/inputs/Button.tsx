@@ -3,12 +3,13 @@ import css from "./Button.module.css";
 type ButtonProps = {
   type?: "button" | "reset" | "submit";
   customFunction?: () => void;
+  id?: string;
   value?: string;
 };
 
-export const Button = ({ type, customFunction, value }: ButtonProps) => {
+export const Button = ({ type, customFunction, id, value }: ButtonProps) => {
   return (
-    <button className={css.btn} type={type} onClick={customFunction}>
+    <button className={css.btn} type={type} id={id} onClick={customFunction}>
       {value}
     </button>
   );
