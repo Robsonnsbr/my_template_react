@@ -70,6 +70,7 @@ export const Form = () => {
             value={name}
             onChange={(event) => setName(event.target.value)}
             required
+            onFocus={focus}
           />
         </div>
         <div>
