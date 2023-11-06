@@ -50,6 +50,10 @@
   background-color:  #5194e0; /* Cor da alça da barra de rolagem */
 }
 
+.information::-webkit-scrollbar-thumb:hover {
+  background-color: #51e0a4;; /* Cor da alça da barra de rolagem quando o mouse estiver sobre ela */
+}
+
 a:hover {
   color: #51e0a4;
 }

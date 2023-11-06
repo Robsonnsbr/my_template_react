@@ -7,25 +7,87 @@
   width: 100%;
   background: #5194e069;
   display: flex;
-  flex-direction: column;
   justify-content: top;
   align-items: center;
-  overflow: hidden !important;
+  overflow: hidden;
+  & h1 {
+   text-align: center;
+  }
+  ::-webkit-scrollbar {
+    box-shadow: -1px -1px 1px 0.5px rgba(0, 0, 0, 0.31);
+    width: 10px; /* Largura da barra de rolagem */
+    background-color:  #5194e069; /* Cor de fundo da barra de rolagem */
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color:  #5194e0; /* Cor da alça da barra de rolagem */
+  }
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #51e0a4;; /* Cor da alça da barra de rolagem quando o mouse estiver sobre ela */
+}
+
+
+.sectionDev {
+  flex: 1;
+  margin: auto;
+  margin-top: 10px;
+  width: 65%;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionCon {
+  flex: 1;
+  margin: auto;
+  margin-top: 10px;
+  width: 40%;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  & li {
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
+
+.inlineBk {
+  margin: 10px;
+  display: inline-flex;
+}
+
+.columnBk {
+  width: 200px;
+  list-style-type: none;
 }
 
 .content {
-  border-radius: .5rem;
+  height: 520px;
+  /* border-radius: .5rem; */
   padding: 5px;
-  background: #ffffffd3;
-  margin: 1rem;
+  background: #ffffff87;
+  margin: 0.5rem 0rem 0.5rem 0.5rem;
   justify-content: center;
   align-items: center;
   Overflow: overlay;
   box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.778);
 }
 
-.content h1,
-p {
+img {
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 17px;
+}
+
+.content p {
   color: #000;
   font-family: "Inter", sans-serif, Arial, Helvetica, sans-serif !important;
   text-shadow: 0px 0px 1px #0000004e;
@@ -44,11 +106,48 @@ p {
 }
 
 
-
-.content::-webkit-scrollbar {
-  background-color: transparent;
+.about a {
+  text-decoration: none;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 }
 
-.about a {
-  margin-bottom: 1rem;
+@media(max-width: 1000px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .about::-webkit-scrollbar {
+    border-radius:  0rem .5rem .5rem 0rem;
+    box-shadow: -1px -1px 1px 0.5px rgba(0, 0, 0, 0.31);
+    width: 15px; /* Largura da barra de rolagem */
+    background-color:  #5194e069; /* Cor de fundo da barra de rolagem */
+  }
+  .about::-webkit-scrollbar-thumb {
+    border-radius:  0rem .5rem .5rem 0rem;
+    background-color:  #5194e0; /* Cor da alça da barra de rolagem */
+  }
+  .about::-webkit-scrollbar-thumb:hover {
+  background-color: #51e0a4;; /* Cor da alça da barra de rolagem quando o mouse estiver sobre ela */
+  }
+
+  .sectionDev {
+    flex: 1;
+    display: flex;
+    width: auto;
+    margin: 5px;
+    flex-direction: column;
+  }
+
+  .sectionCon ul {
+    flex: 1;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+
 }
