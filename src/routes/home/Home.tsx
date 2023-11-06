@@ -33,7 +33,7 @@ export const Home = () => {
   };
   return (
     <div className={css.home} style={style}>
-      <section className={css.content}>
+      <section className={css.contentUser}>
         <motion.div
           initial={{ opacity: 0, y: -1000 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,6 +51,80 @@ export const Home = () => {
         >
           <Search loadUser={loadUser} />
         </motion.div>
+      </section>
+      <section className={css.contentTech}>
+        <h1>TECNOLOGIAS DO PORTFÓLIO</h1>
+        <ul>
+          <li>
+            <a href="https://vitejs.dev/" target="_blank">
+              Vite
+            </a>
+          </li>
+          <li>
+            <a href="https://www.typescriptlang.org/" target="_blank">
+              TypeScript
+            </a>
+          </li>
+          <li>
+            <a href="https://reactjs.org/" target="_blank">
+              React
+            </a>
+          </li>
+          <li>
+            <a href="https://reactjs.org/docs/react-dom.html" target="_blank">
+              React DOM
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://react-icons.github.io/react-icons/"
+              target="_blank"
+            >
+              React Icons
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://blog.logrocket.com/best-practices-react-iframes/"
+              target="_blank"
+            >
+              React Iframe
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://knowbody.github.io/react-router-docs/"
+              target="_blank"
+            >
+              React Router DOM
+            </a>
+          </li>
+          <li>
+            <a href="https://swiperjs.com/" target="_blank">
+              Swiper
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/uuidjs/uuid" target="_blank">
+              UUID
+            </a>
+          </li>
+          <li>
+            <a href="https://www.npmjs.com/package/gh-pages" target="_blank">
+              gh-pages
+            </a>
+          </li>
+          <li>
+            <a href="https://docs.github.com/en/rest" target="_blank">
+              GitHub API REST
+            </a>
+          </li>
+          <li>
+            <a href="https://vercel.com/" target="_blank">
+              Vercel
+            </a>
+          </li>
+        </ul>
       </section>
     </div>
   );
