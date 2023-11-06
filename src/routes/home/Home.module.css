@@ -6,11 +6,12 @@
   background: #5194e069;
   display: flex;
   align-items: center;
-  overflow-y: auto;
-  overflow-x:hidden;
+  overflow:hidden;
   flex-direction: row;
 
   @media (max-width: 800px) {
+    overflow-x:hidden !important;
+    overflow-y: auto;
     flex-direction: column; 
   }
 }
