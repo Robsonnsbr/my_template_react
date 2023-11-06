@@ -10,6 +10,7 @@
   justify-content: top;
   align-items: center;
   overflow: hidden;
+  overflow-x:hidden !important;
   & h1 {
    text-align: center;
   }
