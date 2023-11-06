@@ -2,11 +2,29 @@
   border-radius: .5rem;
   height: 100%;
   width: 100%;
-  max-width: 500px;
+  max-width: max-content;
   background: #5194e069;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: auto;
+  flex-direction: row;
+
+  @media (max-width: 800px) {
+    flex-direction: column; 
+  }
+}
+
+.contentTech {
+  text-align: right;
+  margin: 10px;
+}
+
+.contentTech h1 {
+  margin: 10px;
+}
+
+.contentTech ul li {
+  list-style-type: none;
+  text-align: center;
 }

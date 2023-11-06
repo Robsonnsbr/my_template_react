@@ -47,12 +47,12 @@ export const ProjectDetails = () => {
         <section className={css.ProjectDetails}>
           <Iframe
             url="https://atacadao-app.vercel.app/Login"
-            width="750px"
+            width="700px"
+            min-width="400px"
             height="100%"
             id=""
-            className=""
             display="block"
-            position="relative"
+            // position="relative"
           />
         </section>
         <section className={css.information} style={{ width: "100%" }}>
