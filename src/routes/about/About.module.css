@@ -134,6 +134,7 @@ img {
   background-color: #51e0a4;; /* Cor da alça da barra de rolagem quando o mouse estiver sobre ela */
   }
 
+@media (max-width: 700px) {
   .sectionDev {
     flex: 1;
     display: flex;
@@ -149,5 +150,6 @@ img {
     justify-content: center;
     align-items: center;
   } 
+}
 
 }
