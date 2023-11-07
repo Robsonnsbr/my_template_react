@@ -28,11 +28,8 @@ export const Home = () => {
     }
   };
 
-  const style = {
-    overflow: "hidden",
-  };
   return (
-    <div className={css.home} style={style}>
+    <div className={css.home}>
       <section className={css.contentUser}>
         <motion.div
           initial={{ opacity: 0, y: -1000 }}
