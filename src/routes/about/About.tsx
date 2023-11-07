@@ -143,9 +143,6 @@ export const About = () => {
                 <li>
                   <Icon icon="eos-icons:patterns-outlined" /> Design Patterns
                 </li>
-                <li>
-                  <Icon icon="devicon:figma" /> Figma
-                </li>
               </ul>
             </li>
             <li>
@@ -174,6 +171,9 @@ export const About = () => {
                 </li>
                 <li>
                   <Icon icon="bi:kanban-fill" /> ITIL Scrum/Kanban
+                </li>
+                <li>
+                  <Icon icon="devicon:figma" /> Figma
                 </li>
               </ul>
             </li>

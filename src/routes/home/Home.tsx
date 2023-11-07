@@ -113,12 +113,7 @@ export const Home = () => {
           </li>
           <li>
             <a href="https://docs.github.com/en/rest" target="_blank">
-              GitHub API REST
-            </a>
-          </li>
-          <li>
-            <a href="https://vercel.com/" target="_blank">
-              Vercel
+              GitHub API
             </a>
           </li>
         </ul>
