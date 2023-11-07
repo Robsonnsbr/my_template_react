@@ -42,9 +42,9 @@ export const About = () => {
           </p>
         </div>
         <a
-          href="../../../public/assets/Curriculo_Robson_Monteiro_2023.pdf"
+          href="https://drive.google.com/u/0/uc?id=1UDclT2rbClofsSs-4k0IZwpjkqtmSDLV&export=download"
           download="Curriculo_Robson.pdf"
-          type="application/pdf"
+          target="_blank"
         >
           <Button value={"DOWNLOAD CV"} />
         </a>{" "}
