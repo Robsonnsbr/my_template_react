@@ -44,7 +44,6 @@ export const About = () => {
         <a
           href="https://drive.google.com/u/0/uc?id=1UDclT2rbClofsSs-4k0IZwpjkqtmSDLV&export=download"
           download="Curriculo_Robson.pdf"
-          target="_blank"
         >
           <Button value={"DOWNLOAD CV"} />
         </a>{" "}
@@ -52,12 +51,6 @@ export const About = () => {
       <section className={css.sectionCon}>
         <h2>Habilidades Técnicas:</h2>
         <ul>
-          <li>
-            Desenvolvedor Full Stack Jr. com experiência em DevOps,
-            Infraestrutura e Suporte
-          </li>
-          <li>Arquitetura de computadores</li>
-          <li>Arquitetura de software</li>
           <ul className={css.inlineBk}>
             <li>
               Tecnologias:
@@ -150,10 +143,11 @@ export const About = () => {
                 <li>
                   <Icon icon="eos-icons:patterns-outlined" /> Design Patterns
                 </li>
-                <li>
-                  <Icon icon="devicon:figma" /> Figma
-                </li>
-                <li>
+              </ul>
+            </li>
+            <li>
+              <ul className={css.columnBk}>
+                <li className={css.columnBkLi}>
                   <Icon icon="logos:adobe-photoshop" /> Photoshop
                 </li>
                 <li>
@@ -178,9 +172,20 @@ export const About = () => {
                 <li>
                   <Icon icon="bi:kanban-fill" /> ITIL Scrum/Kanban
                 </li>
+                <li>
+                  <Icon icon="devicon:figma" /> Figma
+                </li>
               </ul>
             </li>
           </ul>
+        </ul>
+        <ul className={css.columnInfo}>
+          <li style={{ fontWeight: 600 }}>Desenvolvedor Full Stack</li>
+          <li>Experiência em DevOps</li>
+          <li>Experiência Infraestrutura</li>
+          <li>Experiência Suporte</li>
+          <li>Arquitetura de computadores</li>
+          <li>Arquitetura de software</li>
         </ul>
       </section>
     </div>
