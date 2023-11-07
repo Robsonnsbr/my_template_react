@@ -25,7 +25,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #51e0a4;; /* Cor da alça da barra de rolagem quando o mouse estiver sobre ela */
+  background-color: #51e0a4; /* Cor da alça da barra de rolagem quando o mouse estiver sobre ela */
 }
 
 
@@ -48,8 +48,13 @@
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  justify-content: center;
+ & ul {
+  align-items: top;
+  justify-content: center;
+}
 
-  & li {
+& li {
     margin: 5px;
     align-items: center;
     justify-content: center;
@@ -61,12 +66,23 @@
 
 .inlineBk {
   margin: 10px;
-  display: inline-flex;
+  display: flex;
+  list-style-type: none;
 }
 
 .columnBk {
-  width: 200px;
-  list-style-type: none;
+  width: 150px;
+  list-style-type: none
+}
+.columnInfo {
+  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+  list-style-type: circle
+}
+
+ li .columnBkLi{
+  margin-top: 25px;
 }
 
 .content {
@@ -150,6 +166,9 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    li {
+      margin: 5px !important;
+    }
   } 
 }
 
