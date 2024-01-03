@@ -41,10 +41,7 @@ export const About = () => {
             uma história marcada por paixão, dedicação e crescimento constante.
           </p>
         </div>
-        <a
-          href="https://drive.google.com/u/0/uc?id=1UDclT2rbClofsSs-4k0IZwpjkqtmSDLV&export=download"
-          download="Curriculo_Robson.pdf"
-        >
+        <a>
           <Button
             value={"DOWNLOAD CV"}
             onClick={() =>
