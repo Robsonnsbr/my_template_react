@@ -2,14 +2,14 @@ import css from "./Button.module.css";
 
 type ButtonProps = {
   type?: "button" | "reset" | "submit";
-  customFunction?: () => void;
+  onClick?: () => void;
   id?: string;
   value?: string;
 };
 
-export const Button = ({ type, customFunction, id, value }: ButtonProps) => {
+export const Button = ({ type, onClick, id, value }: ButtonProps) => {
   return (
-    <button className={css.btn} type={type} id={id} onClick={customFunction}>
+    <button className={css.btn} type={type} id={id} onClick={onClick}>
       {value}
     </button>
   );

@@ -45,8 +45,15 @@ export const About = () => {
           href="https://drive.google.com/u/0/uc?id=1UDclT2rbClofsSs-4k0IZwpjkqtmSDLV&export=download"
           download="Curriculo_Robson.pdf"
         >
-          <Button value={"DOWNLOAD CV"} />
-        </a>{" "}
+          <Button
+            value={"DOWNLOAD CV"}
+            onClick={() =>
+              alert(
+                "AVISO! currículo removido!\nEntre em contato via página de contato."
+              )
+            }
+          />
+        </a>
       </section>
       <section className={css.sectionCon}>
         <h2>Habilidades Técnicas:</h2>
