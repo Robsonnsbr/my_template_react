@@ -41,12 +41,12 @@ export const About = () => {
             uma história marcada por paixão, dedicação e crescimento constante.
           </p>
         </div>
-        <a
+{/*         <a
           href="https://drive.google.com/u/0/uc?id=1UDclT2rbClofsSs-4k0IZwpjkqtmSDLV&export=download"
-          download="Curriculo_Robson.pdf"
+          download="Curriculo_Robson_Monteiro_2023"
         >
           <Button value={"DOWNLOAD CV"} />
-        </a>{" "}
+        </a>{" "} */}
       </section>
       <section className={css.sectionCon}>
         <h2>Habilidades Técnicas:</h2>
